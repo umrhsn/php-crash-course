@@ -51,9 +51,9 @@ if ($t < 12) {
 $posts = [];
 
 if (!empty($posts[0])) {
-    echo $posts[0];
+    echo $posts[0] . '<br>';
 } else {
-    echo 'There are no posts';
+    echo 'There are no posts' . '<br>';
 }
 
 /* -------- Ternary Operator -------- */
@@ -65,6 +65,7 @@ if (!empty($posts[0])) {
 
 // Echo based on a condition (Same as above)
 echo !empty($posts[0]) ? $posts[0] : 'There are no posts';
+echo '<br>';
 
 // Assign a variable based on a condition
 $firstPost = !empty($posts[0]) ? $posts[0] : 'There are no posts';
@@ -77,6 +78,7 @@ $firstPost = !empty($posts[0]) ? $posts[0] : null;
 $firstPost = $posts[0] ?? null;
 
 var_dump($firstPost);
+echo '<br>';
 
 /* -------- Switch Statements ------- */
 
@@ -85,13 +87,24 @@ $favcolor = 'red';
 switch ($favcolor) {
     case 'red':
         echo 'Your favorite color is red!';
+        echo '<br>';
         break;
     case 'blue':
         echo 'Your favorite color is blue!';
+        echo '<br>';
         break;
     case 'green':
         echo 'Your favorite color is green!';
+        echo '<br>';
         break;
     default:
         echo 'Your favorite color is not red, blue, nor green!';
+        echo '<br>';
 }
+
+/*
+You are old enough to vote!Have a good morning!There are no posts
+There are no posts
+NULL
+Your favorite color is red!
+*/
